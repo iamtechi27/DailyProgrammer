@@ -1,0 +1,21 @@
+int first = 0, second = 1, result, target, start = 1;
+
+int main() {
+	take input from user and assign it to 'target'
+	while (true) {
+		cout << first << endl << second << endl;
+		do {
+			add 'first' and 'second', assigning the result to 'result'
+			cout << result << endl;
+			first = second;
+			second = result;
+		} while (result < target)
+		if (result == target) {
+			break;
+			cout << "VALID" << endl;
+		}
+		cout << "NOT VALID" << endl << endl;
+		first = 0;
+		second = ++start;
+	}
+}
