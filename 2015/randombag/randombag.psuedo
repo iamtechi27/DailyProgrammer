@@ -1,0 +1,22 @@
+int leftInBag;
+string bag;
+void init() {
+	fill 'bag' with characters: "OISZLJT"
+	leftInBag = 7;
+}
+
+char draw() {
+	if (leftInBag == 0) {
+		init();
+	}
+	pick from 'bag' using randomizer % leftInBag
+	leftInBag--;
+	return char from random pick
+}
+
+int main() {
+	seed randomizer
+	for (int i = 0; i < 50; i++) {
+		printf("%c", draw());
+	}
+}
