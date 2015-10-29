@@ -1,0 +1,26 @@
+int main() {
+	seed randomizer
+	READ string of 'c' and 'v'
+	FOR length of string
+		IF char is 'c' or 'C'
+			CALL addConsonant
+		ELSE IF char is 'v' or 'V'
+			CALL addVowel
+		ELSE
+			PRINT error
+		ENDIF
+	ENDFOR
+}
+
+void addConsonant(char) {
+	IF char is 'c'
+		PRINT random character from string of lowercase consonants
+	ELSE
+		PRINT random character from string of uppercase consonants
+}
+
+void addVowel(char) {
+	IF char is 'v'
+		PRINT random character from string of lowercase vowels
+	ELSE
+		PRINT random character from string of uppercase vowels
