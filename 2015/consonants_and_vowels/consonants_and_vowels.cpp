@@ -14,16 +14,16 @@ void addConsonant(char c) {
 		cout << cons.at(rand()%21);
 	} else {
 		cout << CONS.at(rand()%21);
-	}
-}
+	}// endif
+}// end addConsonant
 
 void addVowel(char v) {
 	if (v == 'v') {
 		cout << vows.at(rand()%5);
 	} else {
 		cout << VOWS.at(rand()%5);
-	}
-}
+	}// endif
+}// end addVowel
 
 int main() {
 	string input;
