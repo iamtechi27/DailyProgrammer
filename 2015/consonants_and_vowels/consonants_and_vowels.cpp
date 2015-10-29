@@ -8,20 +8,21 @@ string cons = "bcdfghjklmnpqrstvwxyz";
 string CONS = "BCDFGHJKLMNPQRSTVWXYZ";
 string vows = "aeiou";
 string VOWS = "AEIOU";
+string output;
 
 void addConsonant(char c) {
 	if (c == 'c') {
-		cout << cons.at(rand()%21);
+		output += cons.at(rand()%21);
 	} else {
-		cout << CONS.at(rand()%21);
+		output += CONS.at(rand()%21);
 	}// endif
 }// end addConsonant
 
 void addVowel(char v) {
 	if (v == 'v') {
-		cout << vows.at(rand()%5);
+		output += vows.at(rand()%5);
 	} else {
-		cout << VOWS.at(rand()%5);
+		output += VOWS.at(rand()%5);
 	}// endif
 }// end addVowel
 
@@ -32,9 +33,12 @@ int main() {
 	for (int i = 0; i < input.length(); i++) {
 		if (input.at(i) == 'c' || input.at(i) == 'C') {
 			addConsonant(input.at(i));
-		} else {
+		} else if (input.at(i) == 'v' || input.at(i) == 'V') {
 			addVowel(input.at(i));
-		}// endif
+		} else {
+			output = "Input was invalid.";
+			break;
+		}
 	}// endfor
-	cout << endl;
+	cout << output << endl;
 }// end main
