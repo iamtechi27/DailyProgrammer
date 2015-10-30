@@ -1,4 +1,5 @@
 int main() {
+	OPEN enable1.txt
 	READ number from user
 	LOOP number of times user entered
 		READ strings from user into array of size entered by user
@@ -6,6 +7,7 @@ int main() {
 	LOOP number of times user entered
 		PRINT result of longestWord(string)
 	ENDLOOP
+	CLOSE enable1.txt
 }
 
 string longestWord(string) {
